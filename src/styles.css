@@ -2,21 +2,24 @@
 /*=============== Variables CSS ===============*/
 :root {
   /*======== Colors ========*/
-  --body-background: var(--hex, #a17a45);
-  --body-secondary-background: var(--hex, #523916);
-  --primary-color-body-background: var(--hex, #cda882);
-  --secondary-color-body-background: var(--hex, #d4b595);
-  --third-color-body-background: var(--hex, #dcc1a7);
-  --fourth-color-body-background: var(--hex, #e3ceb9);
-  --fifth-color-body-background: var(--hex, #eadbcb);
-  --primary-color-body-text: var(--hex, #000000);
-  --secondary-color-body-text: var(--hex, #ffffff);
-  --third-color-body-text: var(--hex, #663399);
-  --fourth-color-body-text: var(--hex, #7b02c22f);
-  --fifth-color-body-text: var(--hex, #053ae92f);
-  --primary-color-home-background: var(--hex, #00000081);
+  --body-background: var(--hex, #1a1a1a); /* Dark background */
+  --body-secondary-background: var(
+    --hex,
+    #0d0d0d
+  ); /* Darker secondary background */
+  --primary-color-body-background: var(--hex, #333333); /* Dark gray */
+  --secondary-color-body-background: var(--hex, #4d4d4d); /* Medium gray */
+  --third-color-body-background: var(--hex, #666666); /* Lighter gray */
+  --fourth-color-body-background: var(--hex, #808080); /* Gray */
+  --fifth-color-body-background: var(--hex, #999999); /* Light gray */
+  --primary-color-body-text: var(--hex, #ffffff); /* White text */
+  --secondary-color-body-text: var(--hex, #e0e0e0); /* Light gray text */
+  --third-color-body-text: var(--hex, #b3b3b3); /* Medium light gray */
+  --fourth-color-body-text: var(--hex, #cccccc); /* Light gray */
+  --fifth-color-body-text: var(--hex, #f2f2f2); /* Very light gray */
+  --primary-color-home-background: var(--hex, #000000); /* Black */
   --black: var(--hex, #000000);
-  --home-background: var(--hex, #000000b0);
+  --home-background: var(--hex, #000000b0); /* Semi-transparent black */
 
   /*======== Font & Typography ========*/
   --body-font: "Poppins", sans-serif;
@@ -57,6 +60,17 @@ button {
 h1 {
   font-family: var(--third-font);
   font-size: var(--biggest-font-size);
+  color: var(--primary-color-body-text); /* Ensure visibility */
+}
+
+h2 {
+  font-family: var(--third-font);
+  font-size: var(--h2-font-size);
+  color: var(--primary-color-body-text); /* Ensure visibility */
+}
+
+p {
+  color: var(--secondary-color-body-text); /* Ensure visibility */
 }
 
 ul {
@@ -67,7 +81,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary-color-home-background);
+  color: var(--primary-color-body-text); /* Changed to ensure visibility */
 }
 
 img {
@@ -118,7 +132,6 @@ img {
   background-color: var(--secondary-color-body-background);
   color: var(--primary-color-body-text);
   display: inline-block;
-  /* width: 65%; */
 }
 
 .btn-dark {
@@ -238,29 +251,35 @@ img {
   display: flex;
 }
 
+.navbar ul li {
+  position: relative; /* Added for active state underline */
+}
+
 .navbar ul li a {
   padding: 10px 10px;
   display: block;
   font-weight: 600;
   transition: 0.5s;
+  color: var(--primary-color-body-text); /* Ensure visibility */
 }
 
 .navbar ul li a:hover {
   color: var(--body-background);
 }
 
-.navbar ul li a i {
-  margin-right: 0.3125rem;
+.navbar ul li.active a {
+  text-decoration: underline;
+  color: var(--primary-color-body-text); /* Ensure active state is visible */
 }
 
-.main-menu ul li.active {
-  text-decoration: underline;
-  color: var(--primary-color-body-text);
+.navbar ul li a i {
+  margin-right: 0.3125rem;
 }
 
 .navbar ul li:last-child a {
   margin-left: 10px;
 }
+
 .logo {
   width: 100px;
 }
@@ -287,7 +306,7 @@ body {
 }
 
 .hero .books {
-  background: url("/images/logos/logo.png") no-repeat;
+  background: url("/images/logos/logo1.png") no-repeat;
   background-size: contain;
   background-position: center top;
   height: 550px;
@@ -303,28 +322,28 @@ body {
 }
 
 .hero .prayers {
-  background: url("/images/logos/logo.png") no-repeat;
+  background: url("/images/logos/logo1.png") no-repeat;
   background-size: contain;
   background-position: center top;
   height: 550px;
 }
 
 .hero .rituals {
-  background: url("/images/logos/logo.png") no-repeat;
+  background: url("/images/logos/logo1.png") no-repeat;
   background-size: contain;
   background-position: center top;
   height: 550px;
 }
 
 .hero .sabbats {
-  background: url("/images/logos/logo.png") no-repeat;
+  background: url("/images/logos/logo1.png") no-repeat;
   background-size: contain;
   background-position: center top;
   height: 550px;
 }
 
 .hero .spells {
-  background: url("/images/logos/logo.png") no-repeat;
+  background: url("/images/logos/logo1.png") no-repeat;
   background-size: contain;
   background-position: center top;
   height: 550px;
